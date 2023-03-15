@@ -24,19 +24,21 @@ def y(t):
 
 # Define the animation update function
 def update(num):
-    # Borramos los puntos anteriores
+    # Delete the previous points
     ax.clear()
 
-    # Creamos una serie de valores para t
+    # Create a series of values for t
     t = np.linspace(0, num / 10, num)
 
-    # Obtenemos los valores de x e y correspondientes
+    # obtain the corresponding values of x and y
     xs = x(t)
     ys = y(t)
 
     # Draw the Lissajous curve
     ax.plot(xs, ys)
 
-# Creamos la animación
+# Create the animation
 ani = animation.FuncAnimation(fig, update, frames=200, interval=50, repeat=False)
 
+#Show the animation
+plt.show()
